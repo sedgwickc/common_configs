@@ -40,6 +40,7 @@ set nobackup		" Don't use a backup file (also see writebackup)
 set nojoinspaces	" One space after a "." rather than 2
 set ruler		" Show the line position at the bottom of the window
 set scrolloff=1		" Minimum lines between cursor and window edge
+set autoindent
 set shiftwidth=4	" Indent by 4 columns (for C functions, etc).
 set expandtab
 set tabstop=4
@@ -51,8 +52,11 @@ set writebackup		" Write temporary backup files in case we crash
 set nu 			" Show line numbers
 "set spell 		" spell checking
 set cursorline		" highlight current line the cursor is on
-set noet ci pi sts=0 sw=4 ts=4 ai
 set listchars=eol:$,tab:->,trail:~,extends:>,precedes:<
+set t_Co=256    " force use of 256 colors
+set term=xterm-256color    " force use of 256 colors
+set colorcolumn=80    " display line at 80th character of text
+
 
 " status line
 set statusline=%t       "tail of the filename
